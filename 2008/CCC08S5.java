@@ -1,5 +1,5 @@
 import java.io.*;
-// might need alpha beta pruning to AC on DMOJ
+//no ac on dmoj :( not fast enough 
 public class CCC08S5{
   static int[][] moves = {
     {2,1,0,2},
@@ -36,7 +36,7 @@ public class CCC08S5{
     }
     return false;
   }
-  public static int[] makeMove(int[] parts, int m){//pass by reference?
+  public static int[] makeMove(int[] parts, int m){
     int[] r = new int[4];
     for(int x = 0; x < 4; x++){
       r[x] = parts[x] - moves[m][x];
