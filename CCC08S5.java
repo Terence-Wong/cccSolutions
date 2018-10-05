@@ -29,40 +29,13 @@ public class CCC08S5{
     for(int x = 0; x < moves.length; x++){
       int[] r = makeMove(parts, x);
       if(r[0] != -1){
-        //choice[x] = !miniMax(makeMove(parts,x));
         if(!miniMax(r)){
           return true;
         }
       }
     }
     return false;
-    //return combine(choice);
   }
-  /*
-  public static boolean combine(boolean[] a){
-    for(int x = 0; x < a.length; x++){
-      if(a[x]){
-        return true;
-      }
-    }
-    return false;
-  }*/
-  /*
-  public static boolean movePossible(int[] parts, int m){
-    for(int x = 0; x < 4; x++){
-      if(parts[x] - moves[m][x] < 0){
-        return false;
-      }
-    }
-    return true;
-  }
-  public static int[] makeMove(int[] parts, int m){//pass by reference?
-    int[] r = new int[4];
-    for(int x = 0; x < 4; x++){
-      r[x] = parts[x] - moves[m][x];
-    }
-    return r;
-  }*/
   public static int[] makeMove(int[] parts, int m){//pass by reference?
     int[] r = new int[4];
     for(int x = 0; x < 4; x++){
